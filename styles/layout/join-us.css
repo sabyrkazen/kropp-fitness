@@ -94,14 +94,6 @@
   margin-bottom: 52px;
 }
 
-.join-us-form-subtitle {
-  font-size: 20px;
-  line-height: 1.65;
-  text-transform: uppercase;
-  align-items: center;
-  color: var(--color-light);
-}
-
 .join-us-form-body {
   display: flex;
   justify-content: center;
