@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: end;
   padding: 36px 70px;
-  min-height: 985px;
+  min-height: calc(100vh - var(--header-height));
   color: var(--color-light);
   background-color: var(--color-dark-alternate);
 }
@@ -15,14 +15,14 @@
 .banner-info {
   display: flex;
   align-items: end;
-  font-size: 30px;
+  font-size: clamp(16px, 1.56vw, 30px);
   line-height: 1.27;
   font-weight: 700;
 }
 
 .banner-info::before {
   content: '';
-  width: 194px;
+  width: clamp(60px, 10.1vw, 194px);
   aspect-ratio: 1;
   margin-right: 30px;
   background: url('../../assets/icons/bold-arrow-down-right.svg') center/contain
@@ -30,7 +30,7 @@
 }
 
 .banner-title {
-  font-size: 360px;
+  font-size: min(18.75vw, 360px);
   line-height: 1;
 }
 
@@ -67,4 +67,21 @@
 
 .banner-pagination-button:not(.is-current):hover::after {
   border-color: var(--color-light-gray);
+}
+
+@media (max-width: 1024px) {
+  .banner {
+    padding-inline: 15px;
+    row-gap: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .banner-info {
+    margin-bottom: 5px;
+  }
+
+  .banner-info::before {
+    margin-right: 10px;
+  }
 }
